@@ -1,4 +1,4 @@
-OC#	$Id$
+#	$Id$
 #
 
 PROG=	boot
