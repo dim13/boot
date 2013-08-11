@@ -63,7 +63,6 @@
 #define	STACKOFF	0xfffc	/* stacks starts here, grows down */
 #define	PARTSZ		16	/* each item of pt is 16 bytes long */
 #define	NPART		4	/* 4 partitions */
-#define DISKSNUM	0x475
 #define	MBRMAGIC	0xaa55	/* MBR magic */
 
 #define	puts(s)		movw	$s, %si;	call	msg
@@ -268,7 +267,7 @@ prtnum:	.byte	'0'
 def:	.ascii	"\r\n\nDefault: F"	/* runs into dkey... */
 dkey:	.byte	'?';		.byte	' '|0x80
 
-/* namen table */
+/* name table */
 namtab:
 	.byte	os_dos	-nt,	0x01
 	.byte	os_dos	-nt,	0x04
